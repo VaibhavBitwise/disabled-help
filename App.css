@@ -1,0 +1,171 @@
+/* Add styles for loading indicator */
+.loading {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Style for subtitles container */
+.subtitles {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Subtitle text style */
+.subtitles p {
+  margin: 5px 0;
+}
+
+/* General app styles */
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  color: #333;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 25px;
+}
+
+/* Header styles */
+.App-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #004085;
+  text-shadow: 1px 1px 2px #cce5ff;
+}
+
+/* Tool sections layout as cards */
+.tool-section {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.tool-section:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transform: translateY(-5px);
+}
+
+/* Specific colors for each section */
+.tool-section.speech-to-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tool-section.text-to-speech {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.tool-section.image-to-audio {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.tool-section.real-time-subtitles {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* Adjust text colors for colored sections */
+.tool-section.speech-to-text h2,
+.tool-section.speech-to-text p,
+.tool-section.text-to-speech h2,
+.tool-section.text-to-speech p,
+.tool-section.image-to-audio h2,
+.tool-section.image-to-audio p,
+.tool-section.real-time-subtitles h2,
+.tool-section.real-time-subtitles p {
+  color: #333;
+}
+
+/* Section headers */
+.tool-section h2 {
+  color: #0056b3;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Paragraph text */
+.tool-section p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Inputs and textareas */
+.tool-section input[type="file"],
+.tool-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid #007bff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.tool-section input[type="file"]:focus,
+.tool-section textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Textarea specific */
+.tool-section textarea {
+  min-height: 100px;
+}
+
+/* Buttons */
+.tool-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,123,255,0.4);
+}
+
+.tool-section button:disabled {
+  background-color: #a0c8ff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.tool-section button:hover:not(:disabled) {
+  background-color: #0056b3;
+  box-shadow: 0 6px 15px rgba(0,86,179,0.6);
+}
+
+/* Audio controls */
+audio {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
